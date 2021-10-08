@@ -1,0 +1,27 @@
+form {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.form_group label {
+    margin-bottom: 4px;
+}
+
+.form_group input {
+    padding: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: blue;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+}
