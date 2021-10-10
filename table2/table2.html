@@ -7,37 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;400&display=swap');
-    html,
-    body {
-        margin: 0;
-        padding: 16px;
-        background-color: white;
-        box-sizing: border-box;
-        font-family: 'Noto Sans Display', sans-serif;
-    }
-    table {
-        border-collapse: collapse;
-        width: 100%;
-        text-align: left;
-    }
-    th {
-        background-color: gainsboro;
-        padding: 12px 0;
-        text-indent: 12px;
-    }
-    td {
-        border: 1px solid gainsboro;
-        padding: 12px 0;
-        text-indent: 12px;
-    }
-</style>
+        <style>@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;400&display=swap');
 
+        html,
+        body {
+            margin: 0;
+            padding: 16px;
+            background-color: white;
+            box-sizing: border-box;
+            font-family: 'Noto Sans Display', sans-serif;
+        }
 
+        table {
+            border-collapse: collapse;
+            width: 40%;
+            text-align: center;
+        }
 
+        th {
+            background-color: gainsboro;
+            padding: 12px 0 12px 0;
+            border: 2px solid black;
 
+        }
 
+        td {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        .textLeft {
+            text-align: right;
+        }
+
+        .colorGrey {
+            background-color: gainsboro;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -46,7 +52,7 @@
 
     <table>
         <tr>
-            <th>date / project</th>
+            <th>Date / Project</th>
             <th>P1</th>
             <th>P2</th>
             <th>P3</th>
@@ -55,44 +61,53 @@
 
         </tr>
         <tr>
-            <td>01/2018</td>
-            <td>500$</td>
-            <td rowspan="3">320$</td>
-            <td>400%</td>
-            <td>400%</td>
-            <td rowspan="3">400%</td>
+            <td class="colorGrey">01/2018</td>
+            <td>$500.00</td>
+            <td rowspan="3">$320.00</td>
+            <td>$320.00</td>
+            <td class="textLeft">$50.00</td>
+            <td rowspan="3">$1.500.00</td>
         </tr>
         <tr>
-            <td>01/2018</td>
-            <td>01/2018</td>
-            <td>400%</td>
-            <td>400%</td>
+            <td class="colorGrey">02/2018</td>
+            <td>$620.00</td>
+            <td>$420.00</td>
+            <td class="textLeft">$55.00</td>
         </tr>
         <tr>
-            <td>01/2018</td>
-            <td>01/2018</td>
-            <td>400%</td>
-            <td>400%</td>
-            
-        </tr>
-        <tr>
-            <td>01/2018</td>
-            <td>01/2018</td>
-            <td rowspan="3">sdfsdfs</td>
-            <td>400%</td>
-            <td>400%</td>
-            <td rowspan="3">400%</td>
+            <td class="colorGrey">03/2018</td>
+            <td>$720.00</td>
+            <td>$430.00</td>
+            <td class="textLeft">$150.00</td>
 
         </tr>
         <tr>
-            <td>100</td>
-            <td>400%</td>
-            <td>40%</td>
-            <td>400%</td>
-            <td>400%</td>
+            <td class="colorGrey">04/2018</td>
+            <td>$725.00</td>
+            <td rowspan="3">$450.00</td>
+            <td>$450.00</td>
+            <td class="textLeft">$350.00</td>
+            <td rowspan="3">$2.900.00</td>
 
         </tr>
-        
+        <tr>
+            <td class="colorGrey">05/2018</td>
+            <td>$840.00</td>
+            <td>$455.00</td>
+            <td class="textLeft">$480.00</td>
+
+
+        </tr>
+
+        <tr>
+            <td class="colorGrey">06/2018</td>
+            <td>$860.00</td>
+            <td>$500.00</td>
+            <td class="textLeft">$20.00</td>
+
+
+        </tr>
+
 
 
     </table>
