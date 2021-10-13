@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css_general.css">
+</head>
+<style>
+  .sandbox {
+    position: relative;
+  }
+
+  .box-1 {
+    position: absolute;
+    top: 1px;
+    right: 150px
+  }
+
+  .box-2 {
+    position: absolute;
+    top: 51px;
+    left: 1px
+  }
+
+  .box-3 {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+  }
+
+
+  .box-4 {
+    position: absolute;
+    z-index: 1;
+    height: 80px;
+    width: 100px;
+    right: 125px;
+  }
+
+  .box-5 {
+    border-radius: 100%;
+    margin: 1px;
+  }
+
+  .box-5-wrapper {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  .box-6{
+    font-size: 2em;
+    letter-spacing: 0.3em;
+
+  }
+
+  .box-z-1{
+    position: absolute;
+    background-color: blue;
+    top: 15px;
+    z-index: 1;
+    left:165px
+  }
+  .box-z-2{
+    position: absolute;
+    z-index: ;
+    top:20px;
+    left: 180px;
+    z-index: 2;
+  }
+
+  .box-7-wrapper{
+    position: absolute;
+
+  }
+</style>
+
+<body>
+  <main>
+    <section>
+      <h4>Place the square
+        <pre>.box-1</pre> on the target
+      </h4>
+      <div class="sandbox">
+        <div class="box box-1"></div>
+        <div class="target target-1"></div>
+      </div>
+    </section>
+
+    <section>
+      <h4>Place the square
+        <pre>.box-2</pre> on the target
+      </h4>
+      <div class="sandbox">
+        <div class="box box-2"></div>
+        <div class="target target-2"></div>
+      </div>
+    </section>
+
+    <section>
+      <h4>Place the square
+        <pre>.box-3</pre> on the target
+      </h4>
+      <div class="sandbox">
+        <div class="box box-3"></div>
+        <div class="target target-3"></div>
+      </div>
+    </section>
+
+    <section>
+      <h4>Change
+        <pre>.box-4</pre> properties to match the properties of the target
+      </h4>
+      <div class="sandbox">
+        <div class="box box-large box-4"></div>
+        <div class="target target-4"></div>
+      </div>
+    </section>
+
+    <section>
+      <h4>Change
+        <pre>.box-5 and .box-5-wrapper</pre> properties to match the properties of the target
+      </h4>
+      <div class="sandbox">
+        <div class="box-5-wrapper">
+          <div class="box box-large box-5"></div>
+          <div class="box box-large box-5"></div>
+          <div class="box box-large box-5"></div>
+        </div>
+        <div class="target-5-wrapper">
+          <div class="target target-5"></div>
+          <div class="target target-5"></div>
+          <div class="target target-5"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h4>Change
+        <pre>.box-6 and regarding content</pre> properties to match the properties of the target
+      </h4>
+      <div class="sandbox">
+        <div class="box-text box-6">
+          <span>Lorem, ipsum dolor.</p>
+        </div>
+        <div class="target-text target-6">
+          <span>Lorem, ipsum dolor.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h4>Place the wrapper
+        <pre>.box-7-wrapper</pre> on absolute position and then match
+        <pre>.box-z-1 and .box-z-2</pre> properties matching the target
+      </h4>
+      <div class="sandbox">
+        <div class="box-7-wrapper">
+          <div class="box box-7 box-z-1"></div>
+          <div class="box box-7 box-z-2"></div>
+        </div>
+        <div class="target-7-wrapper">
+          <div class="target-fill target-7 target-z-1"></div>
+          <div class="target-fill target-7 target-z-2"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+
+</html>
