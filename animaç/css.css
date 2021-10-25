@@ -1,0 +1,115 @@
+/* 
+<div class="box perspective-square"
+
+        <div class="box z-squares"></div>
+
+
+        <div class="box rotate-square"></div>
+
+
+*/
+
+.perspective-square{
+    transform: rotateX(50deg) rotateZ(50deg);
+    border-radius: 30%;
+    box-shadow: 0 0 1rem red
+
+}
+.z-squares{
+    box-shadow: 0 0 1rem red;
+    transform:rotateZ(30deg) skew(30deg);
+
+}
+
+.rotate-square{
+    transform: rotateZ(50deg);
+}
+
+.odd .hole:nth-child(odd) {
+background-color: #cc33cc;
+}
+
+.four .hole:nth-child(4){
+    background-color: #cc33cc;
+
+}
+
+.sequencia .hole:nth-child(-n+5){
+    background-color: #cc33cc;
+
+
+}
+
+.last .hole:last-child{
+    background-color: #cc33cc;
+}
+
+/*
+<div class="container">
+        <div class="board">
+            <div class="face front">
+                <div class="square square-white"></div>
+                <div class="square square-black"></div>
+                */
+/*
+.board{
+height: 200px;
+width: 200px;
+border: yellow solid 10px;
+background-color: white;
+}
+
+.front{
+    display: grid;
+    grid-template-columns: 18px 18px 18px 18px 18px 18px;
+    grid-template-rows: 18px 18px 18px 18px 18px 18px;
+    justify-content: center;
+
+
+}
+
+.square-black{
+    background-color: black;
+    height: 18px;
+    width: 18px;
+}
+.square-white{
+    background-color: blue;
+    height: 18px;
+    width: 18px;
+}
+*/
+
+
+:root {
+    /* board: 180 + 22,5 = 202,5 */
+    /* --board: calc(var(--tabuleiro) + var(--quadrado)); */
+    --board: calc(var(--square) * var(--grid) + var(--quadrado));
+ 
+    /* fixa */
+    --tabuleiro: 180px;
+    --grid: 8;
+    /* 180 / 8 = 22,5 */
+    --quadrado: calc(var(--tabuleiro) / 8); 
+    --bg-white: #ffffff;
+    --bg-dark: #222;
+
+}
+.board{
+    height: var(--tabuleiro);
+    width: var(--tabuleiro);
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+.square{
+    height: var(--quadrado);
+    width: var(--quadrado);
+}
+.square-white{
+    background-color: white;
+}
+.square-black{
+    background-color: black;
+}
