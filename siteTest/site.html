@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bde385b17d.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="css.css">
     <link rel="stylesheet" href="normalize.css">
     <title>Document</title>
@@ -12,41 +14,37 @@
 
 <body>
     <header class="headerFormat">
-        <div class="iconSandwich">
-            iconSandwich
+        <div class="icon-standart">
+            <img src="assets/menu_white_24dp.svg">
         </div>
         <div class="logo">
-            logo
         </div>
-        <div class="searchBar">
-            searchBar
+
+        <div class="search_box">
+            <input type="text" class="input_search" placeholder="Search">
+            <div class="search_btn">
+                <a href="#"><i class="fas fa-search"></i></a>
+            </div>
+
         </div>
-        <div class="iconFav">
-            favoritos
+        <div class="icon-standart">
+            <a href="#"><img src="assets/favorite_white_24dp.svg"></a>
         </div>
-        <div class="cart">
-            cart
+        <div class="icon-standart">
+            <a href="#"><img src="assets/shopping_cart_white_24dp.svg"></a>
+            
         </div>
     </header>
     <section class="slider">
-        <div class="slider-holder">
-            <span id="slider-image-1"></span>
-            <span id="slider-image-2"></span>
-            <span id="slider-image-3"></span>
-            <div class="image-holder">
-                <img src="/assets/1.jpeg" class="slider-image" />
-                <img src="/assets/2.jpeg" class="slider-image" />
-                <img src="/assets/3.jpeg" class="slider-image" />
-            </div>
-            <div class="button-holder">
-                <a href="#slider-image-1" class="slider-change"></a>
-                <a href="#slider-image-2" class="slider-change"></a>
-                <a href="#slider-image-3" class="slider-change"></a>
-            </div>
-        </div>
-
-
-
+        <marquee class="marquee-slide" scrollamount="10" onmouseover="this.stop();"
+            onmouseout="this.start(); onclick=this.start(); ">
+            <a href="##########">
+                <img src="/assets/1.jpg" alt="ALT" width="500px" height="300px" /></a>
+            <a href="##########">
+                <img src="/assets/2.jpg" alt="ALT" width="500px" height="300px" style="margin-left:-3px;" /></a>
+            <a href="##########">
+                <img src="/assets/3.jpg" alt="ALT" width="500px" height="300px" style="margin-left:-3px;" /></a>
+        </marquee>
     </section>
     <div class="hotTitle">
         Hot Products
@@ -62,3 +60,4 @@
 </body>
 
 </html>
+
