@@ -10,19 +10,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Overlock&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css.css">
+    <script type="text/javascript" src="scrips.js"></script>
     <link rel="stylesheet" href="normalize.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    
+    <title>Home Page</title>
 </head>
 
 <body>
     <header class="headerFormat">
         <div class="adjust-menu">
+
             <div class="icon-standart">
-                <img src="assets/menu_white_24dp.svg">
+                <div onclick="onClickMenu()">
+                    <img src="assets/menu_white_24dp.svg">
+                </div>
             </div>
             <div class="logo">
+                <a href="site.html"></a>
             </div>
         </div>
         <div class="search_box">
@@ -33,6 +38,9 @@
 
         </div>
         <div class="adjust-menu">
+            <div class="icon-standart account-icon">
+                <a href="#"><img src="assets/person_white_24dp.svg"></a>
+            </div>
             <div class="icon-standart">
                 <a href="#"><img src="assets/favorite_white_24dp.svg"></a>
             </div>
@@ -41,29 +49,40 @@
             </div>
         </div>
     </header>
-    <aside class="categories">
-        <div class="category-config">
-            Categoria 1
-        </div>
-        <div class="category-config">
-            Categoria 1
-        </div>
-        <div class="category-config">
-            Categoria 1
-        </div>
-        <div class="category-config">
-            Categoria 1
-        </div>
-        <div class="category-config">
-            Categoria 1
-        </div>
-        <div class="category-config">
-            Categoria 1
-        </div>
-        <div class="category-config">
-            Categoria 1
-        </div>
-    </aside>
+    <div class="categories">
+        <ul class="nav" id="nav">
+            <li><a href="login.html" style="color:#00695C">
+                    <div><span class="material-icons">input</span>Login / Sign Up</div>
+                </a>
+            </li>
+            <li><a href="#">Sport Nutrition<span class="material-icons back-icon">
+                        chevron_right
+                    </span></a></li>
+            <li><a href="#">Men Outfit<span class="material-icons">
+                        chevron_right
+                    </span></a></li>
+            <li><a href="#">Women Outfit<span class="material-icons">
+                        chevron_right
+                    </span></a></li>
+            <li><a href="#">Home Gym Equipment<span class="material-icons">
+                        chevron_right
+                    </span></a></li>
+            <li><a href="#">Tech at the Gym<span class="material-icons">
+                        chevron_right
+                    </span></a></li>
+            <li><a href="#">Nutritional Service<span class="material-icons">
+                        chevron_right
+                    </span></a></li>
+            <li><a href="#">Comfort at Home<span class="material-icons">
+                        chevron_right
+                    </span></a></li>
+            <li><a href="#" style="color:#00695C">
+                    <div><span class="material-icons">edit_location</span>Portugal | English</div>
+                </a>
+            </li>
+        </ul>
+
+    </div>
     <section class="slider">
         <marquee class="marquee-slide" scrollamount="10" onmouseover="this.stop();"
             onmouseout="this.start(); onclick=this.start(); ">
@@ -71,8 +90,7 @@
                 <img src="/assets/1.jpg" alt="ALT" width="500px" height="300px" /></a>
             <a href="##########">
                 <img src="/assets/2.jpg" alt="ALT" width="500px" height="300px" style="margin-left:-3px;" /></a>
-            <a href="##########">
-                <img src="/assets/3.jpg" alt="ALT" width="500px" height="300px" style="margin-left:-3px;" /></a>
+
         </marquee>
     </section>
     <section class="title-section">
@@ -154,6 +172,13 @@
                 </article>
             </div>
         </div>
+    </section>
+    <section class="title-section">
+        <div class="hotTitle">
+            New Trends for 2021
+        </div>
+    </section>
+    <section class="cards-section">
         <div class="card">
             <div class="organizer">
                 <div class="image-container">
@@ -305,8 +330,98 @@
 
 
     <footer class="footer-section">
-        footer
+        <secton class="footer-links">
+            <div class="footer-infos">
+                <div>
+                    Modern Fitness
+                </div>
+                <div>
+                    <p>Worldwide Gym store since 2021. We sell over 100+ branded products on our website</p>
+                </div>
+                <div>
+                    Porto, Portugal
+                </div>
+                <div>
+                    +351 910 999 999
+                </div>
+                <div>
+                    www.modernfitness.com
+                </div>
+            </div>
+            <div class="footer-infos">
+                <div>
+                    Menu
+                </div>
+                <div>
+                    Produts
+                </div>
+                <div>
+                    Inspirations
+                </div>
+                <div>
+                    About us
+                </div>
+                <div>
+                    Terms & Policy
+                </div>
+            </div>
+            <div class="footer-infos">
+                <div>
+                    Account
+                </div>
+                <div>
+                    My Account
+                </div>
+                <div>
+                    Checkout
+                </div>
+                <div>
+                    My Cart
+                </div>
+                <div>
+                    My catalog
+                </div>
+            </div>
+            <div class="footer-infos">
+                <div>
+                    Afiliate
+                </div>
+                <div>
+                    Work with us?
+                </div>
+                <div>
+                    Warranty
+                </div>
+                <div>
+                    COVID-19
+                </div>
+            </div>
+            <div class="footer-infos">
+
+            </div>
+
+        </secton>
+        <section class="footer-last">
+            <div>Payment Method</div>
+            <div class="payment-icons"></div>
+            <div>Follow Us</div>
+            <div>
+                <div class="social-icon"></div>
+                <div class="social-icon"></div>
+                <div class="social-icon"></div>
+                <div class="social-icon"></div>
+            </div>
+
+        </section>
+
+
     </footer>
 </body>
+
+
+
+
+
+
 
 </html>
