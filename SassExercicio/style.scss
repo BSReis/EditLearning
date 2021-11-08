@@ -1,0 +1,143 @@
+@import '_colors.scss';
+@import '_typography.scss';
+
+@mixin icon{
+    height: 37px;
+    padding: 1rem;
+}
+@mixin img{
+    height: 34px;
+    width: 32px;
+}
+
+html body{
+    padding:0;
+    margin: 0;
+    font-family: Poppins;
+}
+
+body{
+    background-color: $base-color;
+
+}
+
+.top-section{
+
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+
+    & a{
+        @include icon;
+
+    }
+    & img{
+        @include img;
+    }
+}
+
+.title-organizer{
+    margin: 0 1.5rem;
+
+    & div:first-child{
+        font-size: 46px;
+        color:$title-color;
+        font-weight: 600;
+    }
+    & div:last-child{
+        line-height: 2rem;
+        font-size:26px;
+        color:$font-color;
+        font-weight: 400;
+    }
+}
+
+.buttons-progress{
+
+    display: flex;
+    justify-content: space-evenly;
+    margin:1.5rem;
+
+}
+
+.btn{
+    background-color: $bottom-color;
+    border-radius: 25px;
+    height: 50px;
+    width: 100px;
+    border: 0px;
+    box-shadow: 10px 10px 10px 0px $bottom-color;
+    &:hover{
+        background-color: $bottom-hover-color;
+    }
+    
+}
+
+.main-box{
+    background:$box-color;
+    height: 250px;
+    width: 350px;
+    margin: 0 1.5rem;
+    border-radius: 25px;
+    color:$box-text-color;
+    display:flex;
+    flex-direction: column;}
+
+.box-title-organizer{
+    display:flex;
+    padding: 1rem;
+    & div{
+        margin: 0.5rem;
+    }
+}
+
+.box-title{
+    font-size: 24px;
+    margin: 0 1rem;
+}
+
+.box-date{
+    margin: 1rem;
+    margin-top: auto;
+}
+
+.cards-container{
+    margin: 0 1.5rem;
+    width: 80vw;
+
+}
+
+.progress-title{
+    font-size: 24px;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.cards-organizer{
+    flex-direction: column;
+}
+
+.card{
+    border: black 1px solid;
+    margin-bottom: 1rem;
+    background-color: $card-background-color;
+}
+
+
+
+nav{
+    position: sticky;
+    bottom:0;
+    background-color: #dfddff;
+}
+
+.main-nav{
+    display:flex;
+    justify-content: space-around;
+}
+.icon-button{
+    @include icon;
+    & img{
+        @include img;
+    }
+}
