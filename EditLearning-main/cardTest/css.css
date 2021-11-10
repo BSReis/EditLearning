@@ -1,0 +1,91 @@
+html body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    background-color:lightgreen;
+    font-family: sans-serif;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card:hover{
+    box-shadow: none;
+    top:50px
+}
+.card{
+    background-color: white;
+    /* border: solid grey 0.01rem; */
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 318px;
+    min-width: 270px;
+    overflow: hidden;
+    margin: 8px;
+    box-shadow: 0px 9px 7px 4px #00000012, 0px 4px 20px 4px #00000094;
+    position: relative;
+    transition: all .4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    bottom: 0;
+}
+.imageContainer{
+    font-family: Open Sans;
+    background-color: #BCD1FF;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.firstTitle{
+    font-family: Open Sans;
+    color: #6E798C;
+    display: flex;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 600;
+
+}
+.boldTitle{
+    font-family: DM Serif Display;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+}
+.text{
+    font-family: Open Sans;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    color: #374A59;
+    line-height: 19px;
+}
+.author{
+    font-family: Open Sans;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: blue;
+}
+
+.alignAuthor{
+    text-align: center;
+}
+.imageIcon{
+    background-image: url(/assets/capa-dog.png);
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    margin: 0 0.5rem 0 0;
+
+}
+.organizerIcon{
+    display: flex;
+    align-items: center;
+}

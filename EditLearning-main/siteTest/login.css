@@ -1,0 +1,8 @@
+.big-title{
+    height: 20vh;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 2rem;
+    font-weight: 600;
+}
