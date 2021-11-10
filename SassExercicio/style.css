@@ -69,6 +69,15 @@ body {
   background-color: white;
 }
 
+.main-box-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .main-box {
   background: linear-gradient(150deg, #9c2cf3 0%, #3a49f9 80%);
   height: 250px;
@@ -83,6 +92,27 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-box::before, .main-box::after {
+  content: "";
+  background-color: white;
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 150px;
+}
+
+.main-box::before {
+  bottom: -146px;
+  left: -106px;
+}
+
+.main-box::after {
+  top: -134px;
+  right: -98px;
 }
 
 .box-title-organizer {

@@ -72,7 +72,10 @@ body{
     }
     
 }
-
+.main-box-center{
+    display: flex;
+    justify-content: center;
+}
 .main-box{
     background:$box-color;
     height: 250px;
@@ -81,7 +84,27 @@ body{
     border-radius: 25px;
     color:$box-text-color;
     display:flex;
-    flex-direction: column;}
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    &::before, &::after{
+        content: "";
+        background-color: white;
+        position: absolute;
+        height: 250px;
+        width: 250px;
+        border-radius: 150px;
+    }
+    &::before{
+        bottom: -146px;
+        left: -106px;
+    }
+    &::after{
+        top: -134px;
+        right: -98px;
+    }
+    
+}
 
 .box-title-organizer{
     display:flex;
