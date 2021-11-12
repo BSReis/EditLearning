@@ -1,0 +1,27 @@
+
+img{
+    height: 300px;
+}
+.cards-section{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.padding{
+    margin: 1rem;
+}
+
+.sticky-position-header{
+    position: sticky;
+    top:0;
+    background-color: green;
+    z-index: 2;
+}
+
+.sticky-bar{
+    position: sticky;
+    background-color: red;
+    bottom: 0;
+    border: blue solid 10px;
+}
