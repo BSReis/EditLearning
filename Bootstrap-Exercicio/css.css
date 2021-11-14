@@ -18,10 +18,12 @@ justify-content: center;
     background-color: green;
     z-index: 2;
 }
+.title-organizer{
+    text-align: center;
+    margin: 1rem;
 
-.sticky-bar{
+}
+.sticky-position-footer{
     position: sticky;
-    background-color: red;
     bottom: 0;
-    border: blue solid 10px;
 }
