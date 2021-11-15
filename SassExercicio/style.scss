@@ -1,19 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import '_colors.scss';
 @import '_typography.scss';
 
 @mixin icon{
     height: 37px;
-    padding: 1rem;
+    padding: 0 0.5rem;
 }
 @mixin img{
-    height: 34px;
-    width: 32px;
+    height: 24px;
+    width: 22px;
+}
+
+@mixin display-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 html body{
     padding:0;
     margin: 0;
-    font-family: Poppins;
+    font-family: $font;
+    box-sizing: border-box;
 }
 
 body{
@@ -25,7 +33,7 @@ body{
 
     display: flex;
     justify-content: space-between;
-    margin: 0.5rem;
+    margin: 2.5rem 1.5rem;
 
     & a{
         @include icon;
@@ -37,16 +45,17 @@ body{
 }
 
 .title-organizer{
-    margin: 0 1.5rem;
+    margin: 0 2rem;
+    
 
     & div:first-child{
-        font-size: 46px;
+        font-size: 36px;
         color:$title-color;
         font-weight: 600;
     }
     & div:last-child{
         line-height: 2rem;
-        font-size:26px;
+        font-size:24px;
         color:$font-color;
         font-weight: 400;
     }
@@ -69,6 +78,7 @@ body{
     box-shadow: 10px 10px 10px 0px $bottom-color;
     &:hover{
         background-color: $bottom-hover-color;
+        cursor: pointer;
     }
     
 }
@@ -76,10 +86,11 @@ body{
     display: flex;
     justify-content: center;
 }
+
 .main-box{
     background:$box-color;
     height: 250px;
-    width: 350px;
+    width: 400px;
     margin: 0 1.5rem;
     border-radius: 25px;
     color:$box-text-color;
@@ -89,11 +100,11 @@ body{
     overflow: hidden;
     &::before, &::after{
         content: "";
-        background-color: white;
         position: absolute;
         height: 250px;
         width: 250px;
         border-radius: 150px;
+        background-color:rgba(151, 80, 206, 0.514);
     }
     &::before{
         bottom: -146px;
@@ -103,25 +114,43 @@ body{
         top: -134px;
         right: -98px;
     }
-    
 }
 
 .box-title-organizer{
     display:flex;
     padding: 1rem;
+    
     & div{
-        margin: 0.5rem;
+        @include display-center;
     }
+    & div:first-child{
+        margin: 0.5rem;
+        background-color: rgba(156,44,243,1);
+        border-radius: 10px;
+        height: 50px;
+        width: 50px;
+    }
+    & div:nth-child(2){
+        font-size: 20px;
+    }
+    
+}
+.decoration-delete{
+    text-decoration: none;
 }
 
 .box-title{
     font-size: 24px;
-    margin: 0 1rem;
+    margin: 0 1.5rem;
+    z-index: 1;
+
+
 }
 
 .box-date{
-    margin: 1rem;
+    margin: 2rem;
     margin-top: auto;
+    z-index: 2;
 }
 
 .cards-container{
@@ -141,10 +170,85 @@ body{
 }
 
 .card{
-    border: black 1px solid;
     margin-bottom: 1rem;
     background-color: $card-background-color;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding: 1rem;
+    & div:first-child{
+        display: flex;  
+        }
+    & div:nth-child(2){
+    display: flex;
+    align-items: center;
+        & a{
+        display: flex;
+        flex-direction: column;
+        padding: 0.8rem 1rem;
+        }
+    }
+    
 }
+
+.card-icon{
+    box-sizing: border-box;
+    background: $box-color;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-text-organizer{
+    @include display-center;
+    flex-direction: column;
+
+    
+    margin: 0 1rem;
+    & div:last-child{
+        margin-right: auto;
+        color: $font-color;
+
+    }
+}
+
+.dots span{
+    border:rgb(179, 179, 179) 2px solid;
+    margin: 2px;
+    border-radius: 50%;
+}
+
+.dots-test{
+    position: relative;
+    
+    & a span{
+        border: 2px solid rgb(179, 179, 179);
+        border-radius: 50%;
+    }
+    &::before, &::after{
+        position: absolute;
+        content: "";
+        height: 4px;
+        width: 4px;
+        background-color: rgb(179, 179, 179);
+        border-radius: 50%;
+        
+    }
+    &::before{
+        top:14px;
+        right: 16px;
+    }
+    &::after{
+        bottom: 14px;
+        right: 16px;
+    }
+    
+}
+
 
 
 
@@ -152,6 +256,7 @@ nav{
     position: sticky;
     bottom:0;
     background-color: #dfddff;
+    height:3rem;
 }
 
 .main-nav{
@@ -160,7 +265,82 @@ nav{
 }
 .icon-button{
     @include icon;
+    padding-top:0.7rem;
     & img{
         @include img;
     }
+}
+
+
+/*scss of the second page*/
+
+.inputs-box-organizer{
+    background: linear-gradient(177.23deg, #707CED -4.5%, #14458E 109.75%);
+    height: 450px;
+    width: 100%;
+    margin-bottom: 2rem;
+    color:$box-text-color;
+    overflow: hidden;
+
+}
+.background-circle::after{
+    content: "";
+    position: absolute;
+    background-color: #2E3A59;
+    opacity: 0.15;
+    height: 380px;
+    width: 300px;
+    border-radius: 50%;
+    top:-186px;
+    right:0;
+}
+
+.box-lines-organizer{
+    @include display-center;
+    flex-direction: column;
+
+}
+
+.input-box-title{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem;
+    & div:nth-child(2){
+    font-size: 22px;
+    }
+} 
+
+.input-organizer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 1rem;
+}
+input{
+    background-color: transparent;
+    padding: 1rem 0;
+    margin:0.5rem 0;
+    border:none;
+    border-bottom: 1px solid #5E6CEA;
+    color:white;
+    width: 100%;
+    font-size: 24px;
+
+}
+#name::placeholder{
+    color:white;
+
+}
+.btn-addtask{
+    width: 40%;
+    height: 44px;
+    max-width: 250px;
+    background-color:#5E6CEA;
+    cursor: pointer;
+    border:none;
+    border-radius:4px ;
+    color: white;
+    font-size: 16px;
+    font-family: poppins;
 }
