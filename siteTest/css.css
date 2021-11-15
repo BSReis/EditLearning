@@ -34,7 +34,7 @@ html body {
     background-size: cover;
     width: 3.5rem;
     height: 2rem;
-    border-radius: 30%;
+    border-radius: 50px;
     margin: 0 0.3rem 0 0;
 
 }
@@ -97,15 +97,16 @@ html body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+
 }
 
 .card {
     margin: 0 0 2rem 0;
     padding: 0 0.5rem 0 0.5rem;
     height: 170px;
-    width: calc(100vw / 2);
-    max-width: 250px;
+    width: clamp(180px, 50vw, 200px);
+    max-width: 260px;
 }
 
 .image-container {
@@ -114,7 +115,7 @@ html body {
     height: 6rem;
     width: 100%;
     background-position: center;
-    border-radius: 10%;
+    border-radius: 25px;
 }
 
 .card-information {
@@ -189,16 +190,25 @@ html body {
     z-index: 1;
 }
 
-.footer-links {
-    padding: 1rem;
+.footer-section section:first-child{
     background-color: #00695C;
+
+}
+
+.footer-links {
+    padding: 1rem 1rem 2rem 1rem;
     color: white;
     display: flex;
-    justify-content: flex-start;
-    font-size: 12px;
+    justify-content: center;
+    font-size: 14px;
+    max-width: 920px;
+    margin:auto;
 }
-.footer-infos:first-child{
-    width: 200px;
+.footer-infos{
+    line-height: 1.5rem;
+    margin: auto;
+padding:0.5rem;
+
 }
 
 .footer-infos div:first-child{
@@ -206,11 +216,33 @@ html body {
     margin-bottom: 1rem;
 }
 
-.footer-infos{
-    margin-left:1rem
+.payment-icons img{
+    height: 30px;
+    width: 40px;
 }
-.footer-infos div{
-    margin-bottom: rem;
+.footer-last div:first-child{
+    margin: 0.5rem;
+    font-size: 14px;
+}
+.footer-last div:last-child{
+    margin: 0.5rem;
+}
+
+.footer-last div:nth-child(2){
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 400px) {
+    .footer-infos div:not(:first-child){
+        display: none;
+    }
+    .footer-infos{
+        padding: 0;
+    }
+    .footer-links{
+        padding: 1rem;
+    }
 }
 
 
@@ -231,4 +263,17 @@ html body {
     .account-icon {
         display: block;
     }
+}
+
+@media screen and (min-width: 900px) {
+
+    .media-margin{
+        align-items: center;
+        max-width: 920px;
+        margin:auto;
+    }
+    .card {
+max-width: 25%;
+    }
+
 }

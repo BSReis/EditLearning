@@ -155,18 +155,21 @@ body{
 
 .cards-container{
     margin: 0 1.5rem;
-    width: 80vw;
 
 }
 
 .progress-title{
     font-size: 24px;
-    margin-top: 4rem;
-    margin-bottom: 1rem;
+    margin:4rem 1rem 1rem 2rem
 }
 
 .cards-organizer{
+    display: flex;
     flex-direction: column;
+    align-items:center;
+
+    
+
 }
 
 .card{
@@ -176,6 +179,7 @@ body{
     display: flex;
     justify-content: space-between;
     height: 50px;
+    width: 80%;
     padding: 1rem;
     & div:first-child{
         display: flex;  
@@ -281,6 +285,7 @@ nav{
     margin-bottom: 2rem;
     color:$box-text-color;
     overflow: hidden;
+    position: relative;
 
 }
 .background-circle::after{
@@ -292,7 +297,7 @@ nav{
     width: 300px;
     border-radius: 50%;
     top:-186px;
-    right:0;
+    right:-74px;
 }
 
 .box-lines-organizer{
