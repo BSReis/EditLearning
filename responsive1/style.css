@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+html body {
+  margin: 0;
+  padding: 0;
+  font-family: roboto mono;
+}
+
+.background-img {
+  background: url(/assets/img1.png);
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.header-organizer {
+  background-color: #232323;
+  opacity: 0.5;
+  height: 124px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.5rem;
+}
+
+.header-links a {
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+.hamburguer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hamburguer div {
+  width: 10px;
+  border-bottom: white solid 1px;
+  padding: 4px;
+}
+
+.hamburguer a {
+  padding: 1rem;
+}
+
+.main-text {
+  color: white;
+  font-size: 2rem;
+  width: 650px;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.main-text p {
+  margin: 0;
+}
+
+.second-header {
+  background-color: #232323;
+  height: 124px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.second-header div a {
+  text-decoration: none;
+  color: white;
+  padding: 2rem;
+}
+
+.menu-background {
+  background-color: #232323;
+}
+
+.main-text2 {
+  background-color: #232323;
+  height: 100vh;
+  color: white;
+  font-size: 72px;
+  font-weight: bold;
+  padding: 2rem;
+  letter-spacing: 3px;
+}
+
+.main-text2 div:hover {
+  color: #D27979;
+}
+
+.third-body {
+  background-color: black;
+}
+
+.third-header {
+  height: 84px;
+  background-color: #232323;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 28px;
+}
+
+.third-header div {
+  padding: 2rem;
+}
+
+.third-main-text {
+  color: white;
+  margin-left: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.third-submenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.third-submenu div {
+  margin: 0.7rem;
+}
+
+.third-submenu div:hover {
+  color: #D27979;
+}
+
+.card-section {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px 55px;
+}
+
+.card {
+  background-color: white;
+  height: 284px;
+  width: 350px;
+  margin: 10px;
+}
+
+.third-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #232323;
+  color: white;
+  height: 84px;
+}
+
+.third-footer div {
+  margin: 55px;
+}
+
+.navigation-footer-bar {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation-footer-bar div {
+  margin: 0 55px 40px 55px;
+}
+/*# sourceMappingURL=style.css.map */

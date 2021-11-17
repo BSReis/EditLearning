@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+
+
+html body{
+    margin:0;
+    padding:0;
+    font-family: roboto mono;
+
+}
+.background-img{
+    background: url(/assets/img1.png);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.header-organizer{
+    background-color:#232323;
+    opacity: 0.5;
+    height: 124px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-links{
+    display: flex;
+
+    padding: 1.5rem;
+& a{
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+}
+
+.hamburguer{
+    display: flex;
+    flex-direction: column;
+
+    & div{
+        width: 10px;
+        border-bottom: white solid 1px;
+        padding: 4px;
+    }
+    & a{
+        padding:1rem ;
+    }
+}
+
+.main-text{
+    color: white;
+    font-size: 2rem;
+    width: 650px;
+    position: absolute;
+    bottom:1rem;
+    left: 1rem;
+    padding: 0;
+    margin: 0;
+    & p{
+        margin: 0;
+    }
+}
+
+.second-header{
+    background-color: #232323;
+    height: 124px;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+
+    & div{
+        & a{
+            text-decoration: none;
+            color: white;
+            padding: 2rem;
+
+        }
+    }
+
+}
+
+.menu-background{
+    background-color: #232323;
+}
+
+.main-text2{
+    background-color: #232323;
+    height: 100vh;
+    color: white;
+    font-size: 72px;
+    font-weight: bold;
+    padding: 2rem;
+    letter-spacing: 3px;
+    & div:hover{
+        color:#D27979;
+
+    }
+}
+
+.third-body{
+    background-color: black;
+}
+
+.third-header{
+    height: 84px;
+    background-color: #232323;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28px;
+    & div{
+        padding: 2rem;
+    }
+}
+
+.third-main-text{
+    color:white;
+    margin-left: 55px;
+    display: flex;
+}
+.third-submenu{
+    display: flex;
+    & div{
+        margin: 0.7rem;
+    
+    }
+    & div:hover{
+        color:#D27979;
+    }
+}
+
+.card-section{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 55px;
+}
+
+.card{
+    background-color: white;
+    height: 284px;
+    width: 350px;
+    margin: 10px;
+}
+
+.third-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232323;
+    color: white;
+    height: 84px;
+    & div{
+        margin: 55px;
+    }
+}
+
+.navigation-footer-bar{
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & div{
+        margin:0 55px 40px 55px;
+    }
+}
