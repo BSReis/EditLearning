@@ -41,6 +41,29 @@ html body {
   color: white;
 }
 
+.category-menu {
+  background-color: black;
+  position: fixed;
+  right: -100vw;
+  width: 100vw;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.category-organizer {
+  background-color: black;
+  height: 100vh;
+  color: white;
+  font-size: 72px;
+  font-weight: bold;
+  padding: 2rem;
+  letter-spacing: 3px;
+}
+
+.category-organizer div:hover {
+  color: #D27979;
+}
+
 .hamburguer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,16 +72,42 @@ html body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
 }
 
 .hamburguer div {
-  width: 10px;
-  border-bottom: white solid 1px;
-  padding: 4px;
+  width: 26px;
+  height: 2px;
+  margin: 4px;
+  background-color: white;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
 }
 
-.hamburguer a {
-  padding: 1rem;
+#toogle {
+  display: none;
+}
+
+#toogle:checked + label .first-line {
+  -webkit-transform: rotate(45deg) translateY(6px);
+          transform: rotate(45deg) translateY(6px);
+}
+
+#toogle:checked + label .second-line {
+  -webkit-transform: rotate(-45deg) translateY(-7px);
+          transform: rotate(-45deg) translateY(-7px);
+}
+
+#toogle:checked + label .third-line {
+  display: none;
+}
+
+#toogle:checked ~ .category-menu {
+  display: block;
+  right: 0;
+  top: 124px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
 }
 
 .main-text {

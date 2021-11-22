@@ -36,18 +36,64 @@ html body{
 
 }
 
+.category-menu{
+    background-color: black;
+    position: fixed;
+    right:-100vw;
+    width: 100vw;
+    transition: .2s ease;
+}
+
+.category-organizer{
+    background-color: black;
+    height: 100vh;
+    color: white;
+    font-size: 72px;
+    font-weight: bold;
+    padding: 2rem;
+    letter-spacing: 3px;
+    & div:hover{
+        color:#D27979;
+    }
+}
+
 .hamburguer{
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 
     & div{
-        width: 10px;
-        border-bottom: white solid 1px;
-        padding: 4px;
+        width: 26px;
+        height: 2px;
+        margin:4px;
+        background-color: white;
+        transition: .2s ease;
+
     }
-    & a{
-        padding:1rem ;
-    }
+}
+
+#toogle{
+    display: none;
+}
+
+#toogle:checked + label .first-line{
+    transform: rotate(45deg) translateY(6px) ;
+
+}
+
+#toogle:checked + label .second-line{
+    transform: rotate(-45deg) translateY(-7px);
+}
+
+#toogle:checked + label .third-line{
+    display: none;
+}
+
+#toogle:checked ~ .category-menu{
+    display: block;
+    right: 0;
+    top:124px;
+    transition: .2s ease;
 }
 
 .main-text{
