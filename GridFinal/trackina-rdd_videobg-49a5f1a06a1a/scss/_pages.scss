@@ -1,0 +1,27 @@
+#hero{
+    a{
+        color: $white;
+        text-decoration: none;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        font-size: 1.5rem;
+        @media (min-width: $tablet) {
+            font-size: 2rem;
+        }
+        @media (min-width: $desktop) {
+            font-size: 2.5rem;
+        }
+        .gridrow{
+            margin-bottom: $gridgutter * 3;
+            @media (min-width: $tablet) {
+                margin-bottom: $gridgutter * 3.5;
+            }
+            @media (min-width: $desktop) {
+                margin-bottom: $gridgutter * 4;
+            }
+        }
+    }
+}

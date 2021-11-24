@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+@import "normalize";
+@import "variables";
+@import "utils";
+@import "grid";
+
+html body{
+    margin:0;
+    padding:0;
+    font-family: roboto mono;
+}
+
+@for $i from 1 through $gridcolumns {
+    .col-#{$i} {
+        box-sizing: border-box;
+        width: percentage($i/$gridcolumns);
+        padding-left: $gridgutter / 2;
+        padding-right: $gridgutter / 2;
+    }
+}
+
+.background-img{
+    background: url(/assets/img1.png);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.header-organizer{
+    background-color: blue;
+}
+
+.col-4{
+    background-color: red;
+}

@@ -1,0 +1,24 @@
+.gridrow{
+    width: $gridwidth;
+    margin: 0 auto;
+    @media(min-width: $tablet){
+        width: $gridwidtht;
+    }
+    @media(min-width: $desktop){
+        width: $gridwidthd;
+    }
+    @media(min-width: $desktoplg){
+        width: $gridwidthdlg;
+    }
+}
+
+.gridrow{
+    display: flex;
+    flex-wrap: wrap;
+    .col{
+        flex: 1;
+        box-sizing: border-box;
+        padding-left: $gridgutter / 2;
+        padding-right: $gridgutter / 2;
+    }
+}

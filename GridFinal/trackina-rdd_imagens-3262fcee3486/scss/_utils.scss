@@ -1,0 +1,51 @@
+html{
+    color: $white;
+    background-color: $black;
+    font-weight: 300;
+    line-height: 1.618; // the golden ratio, baby!
+    font-size: $basefontsizemobile;
+    @media(min-width: $tablet){
+      font-size: $basefontsizetablet;
+    }
+    @media(min-width: $desktop){
+      font-size: $basefontsizedesktop;
+    }
+}
+
+/* ================================== */
+/* ======= MARGINS / PADDINGS ======= */
+/* ================================== */
+$sizes: (
+    'none': 0,
+    'full': $gridgutter, 
+    'double': $gridgutter * 2
+);
+@each $name, $size in $sizes {
+    @each $mode in margin, padding {
+        .#{$mode}#{$name} {
+            #{$mode}: $size !important;
+        }
+        .#{$mode}horizontal#{$name} {
+            #{$mode}-left: $size !important;
+            #{$mode}-right: $size !important;
+        }
+        .#{$mode}vertical#{$name} {
+            #{$mode}-top: $size !important;
+            #{$mode}-bottom: $size !important;
+        }
+        @each $side in top, right, bottom, left {
+            .#{$mode}#{$side}#{$name} {
+                #{$mode}-#{$side}: $size !important;
+            }
+        }
+    }
+}
+
+/* ==================== */
+/* ======= CARD ======= */
+/* ==================== */
+.card{
+    @extend .margintopfull;
+    width: 100%;
+    box-shadow: 0 $gridgutter / 4 $gridgutter / 2 rgba($white, 0.1);
+}
