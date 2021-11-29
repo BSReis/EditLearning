@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
 @import "normalize";
 @import "variables";
 @import "utils";
 @import "grid";
 
-html body{
-    margin:0;
-    padding:0;
+html body {
+    margin: 0;
+    padding: 0;
     font-family: roboto mono;
 }
 
@@ -19,17 +19,105 @@ html body{
     }
 }
 
-.background-img{
+.background-img {
     background: url(/assets/img1.png);
     background-size: cover;
     height: 100vh;
     position: relative;
 }
 
-.header-organizer{
-    background-color: blue;
+.header-organizer {
+    background-color: #232323;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    height: 124px;
+}
+.header-home {
+    & a {
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        font-size: 16px;
+    }
 }
 
-.col-4{
-    background-color: red;
+.toogle-container {
+    text-align: end;
+    width: 34px;
+    margin-left: auto;
+}
+
+.hamburguer {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: flex-end;
+
+    & div {
+        width: 26px;
+        height: 2px;
+        margin: 4px;
+        background-color: white;
+        transition: 0.2s ease;
+    }
+}
+
+.category-menu {
+    background-color: black;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    transition: 0.2s ease;
+    z-index: -1;
+    top: -100vh;
+    right: 0;
+}
+
+.category-organizer {
+    text-align: start;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 120px 0;
+    & div {
+        margin: 20px 0;
+        & a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    & a:hover {
+        color: #d27979;
+    }
+}
+
+#toogle {
+    display: none;
+}
+
+#toogle:checked + label .first-line {
+    transform: rotate(45deg) translateY(6px);
+}
+
+#toogle:checked + label .second-line {
+    transform: rotate(-45deg) translateY(-7px);
+}
+
+#toogle:checked + label .third-line {
+    display: none;
+}
+
+#toogle:checked ~ .category-menu {
+    display: block;
+    top: 0;
+    transition: 0.2s ease;
+}
+
+
+.main-text{
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 74vh;
 }

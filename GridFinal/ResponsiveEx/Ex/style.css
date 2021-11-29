@@ -477,10 +477,115 @@ html body {
 }
 
 .header-organizer {
-  background-color: blue;
+  background-color: #232323;
+  opacity: 0.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 124px;
 }
 
-.col-4 {
-  background-color: red;
+.header-home a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.toogle-container {
+  text-align: end;
+  width: 34px;
+  margin-left: auto;
+}
+
+.hamburguer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.hamburguer div {
+  width: 26px;
+  height: 2px;
+  margin: 4px;
+  background-color: white;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.category-menu {
+  background-color: black;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  z-index: -1;
+  top: -100vh;
+  right: 0;
+}
+
+.category-organizer {
+  text-align: start;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin: 120px 0;
+}
+
+.category-organizer div {
+  margin: 20px 0;
+}
+
+.category-organizer div a {
+  text-decoration: none;
+  color: white;
+}
+
+.category-organizer a:hover {
+  color: #d27979;
+}
+
+#toogle {
+  display: none;
+}
+
+#toogle:checked + label .first-line {
+  -webkit-transform: rotate(45deg) translateY(6px);
+          transform: rotate(45deg) translateY(6px);
+}
+
+#toogle:checked + label .second-line {
+  -webkit-transform: rotate(-45deg) translateY(-7px);
+          transform: rotate(-45deg) translateY(-7px);
+}
+
+#toogle:checked + label .third-line {
+  display: none;
+}
+
+#toogle:checked ~ .category-menu {
+  display: block;
+  top: 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.main-text {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 74vh;
 }
 /*# sourceMappingURL=style.css.map */
