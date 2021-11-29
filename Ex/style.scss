@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+@import "normalize";
+@import "variables";
+@import "utils";
+@import "grid";
+
+html body {
+    margin: 0;
+    padding: 0;
+    font-family: roboto mono;
+}
+
+.background-img {
+    background: url(/assets/img1.png);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    background-position: center center;
+}
+
+header{
+    background-color: rgba(35, 35, 35,0.6);
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+.header-organizer {
+    display: flex;
+    align-items: center;
+    height: 124px;
+}
+.header-home {
+    & a {
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        font-size: 16px;
+    }
+}
+
+.toogle-container {
+    text-align: end;
+    width: 34px;
+    margin-left: auto;
+}
+
+.hamburguer {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: flex-end;
+
+    & div {
+        width: 26px;
+        height: 2px;
+        margin: 4px;
+        background-color: white;
+        transition: 0.2s ease;
+    }
+}
+
+.category-menu {
+    background-color: black;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    transition: 0.2s ease;
+    z-index: -1;
+    top: -100vh;
+    right: 0;
+}
+
+.category-organizer {
+    text-align: start;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    flex-direction: column;
+    margin-top:124px;
+    
+    & div {
+        margin: 20px 0;
+        & a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    & a:hover {
+        color: #d27979;
+    }
+}
+
+#toogle {
+    display: none;
+}
+
+#toogle:checked + label .first-line {
+    transform: rotate(45deg) translateY(6px);
+}
+
+#toogle:checked + label .second-line {
+    transform: rotate(-45deg) translateY(-7px);
+}
+
+#toogle:checked + label .third-line {
+    display: none;
+}
+
+#toogle:checked ~ .category-menu {
+    display: block;
+    top: 0;
+    transition: 0.2s ease;
+}
+
+
+.main-text{
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+    height: 100vh;
+    & p{
+        margin-top: auto;
+        margin-bottom: $gridgutter * 3;
+    }
+}
+
+.section-selector{
+    padding-top: 192px;
+    & div{
+        margin-top:auto;
+        margin-right: 30px;
+        display:flex;
+        & a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+        & a:hover {
+            color: #d27979;
+        
+    }
+    
+}
+
+.card{
+    height: 100%;
+    & img{
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+}
