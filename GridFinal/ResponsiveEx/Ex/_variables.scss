@@ -14,7 +14,7 @@ $gridcolumns:4;
 $gridgutter:20px;
 $i:1;
 
-$gridwidth: calc(100% - #{$gridgutter});
+$gridwidth: calc(100% - #{$gridgutter} - 60px);
 $gridwidtht: calc(90% - #{$gridgutter});
 $gridwidthd: $desktop - $gridgutter * 2;
 $gridwidthdlg: $desktoplg - $gridgutter * 3;

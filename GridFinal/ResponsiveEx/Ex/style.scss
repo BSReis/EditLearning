@@ -10,25 +10,22 @@ html body {
     font-family: roboto mono;
 }
 
-@for $i from 1 through $gridcolumns {
-    .col-#{$i} {
-        box-sizing: border-box;
-        width: percentage($i/$gridcolumns);
-        padding-left: $gridgutter / 2;
-        padding-right: $gridgutter / 2;
-    }
-}
-
 .background-img {
     background: url(/assets/img1.png);
     background-size: cover;
     height: 100vh;
     position: relative;
+    background-position: center center;
+}
+
+header{
+    background-color: rgba(35, 35, 35,0.6);
+    width: 100%;
+    position: fixed;
+    z-index: 10;
 }
 
 .header-organizer {
-    background-color: #232323;
-    opacity: 0.6;
     display: flex;
     align-items: center;
     height: 124px;
@@ -66,8 +63,8 @@ html body {
 .category-menu {
     background-color: black;
     position: fixed;
-    width: 100vw;
     height: 100vh;
+    width: 100%;
     transition: 0.2s ease;
     z-index: -1;
     top: -100vh;
@@ -79,7 +76,9 @@ html body {
     font-size: 36px;
     font-weight: 800;
     letter-spacing: 3px;
-    margin: 120px 0;
+    flex-direction: column;
+    margin-top:124px;
+    
     & div {
         margin: 20px 0;
         & a {
@@ -119,5 +118,36 @@ html body {
     font-weight: 300;
     font-size: 24px;
     line-height: 32px;
-    margin-top: 74vh;
+    height: 100vh;
+    & p{
+        margin-top: auto;
+        margin-bottom: $gridgutter * 3;
+    }
+}
+
+.section-selector{
+    padding-top: 192px;
+    & div{
+        margin-top:auto;
+        margin-right: 30px;
+        display:flex;
+        & a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+        & a:hover {
+            color: #d27979;
+        
+    }
+    
+}
+
+.card{
+    height: 100%;
+    & img{
+        display: block;
+        height: auto;
+        width: 100%;
+    }
 }
