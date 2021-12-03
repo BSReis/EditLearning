@@ -18,8 +18,8 @@ html body {
     background-position: center center;
 }
 
-header{
-    background-color: rgba(35, 35, 35,0.6);
+header {
+    background-color: rgba(35, 35, 35, 0.6);
     width: 100%;
     position: fixed;
     z-index: 10;
@@ -77,8 +77,8 @@ header{
     font-weight: 800;
     letter-spacing: 3px;
     flex-direction: column;
-    margin-top:124px;
-    
+    margin-top: 124px;
+
     & div {
         margin: 20px 0;
         & a {
@@ -113,41 +113,223 @@ header{
     transition: 0.2s ease;
 }
 
-
-.main-text{
+.main-text {
     font-weight: 300;
     font-size: 24px;
     line-height: 32px;
     height: 100vh;
-    & p{
+    & p {
         margin-top: auto;
         margin-bottom: $gridgutter * 3;
     }
 }
 
-.section-selector{
-    padding-top: 192px;
-    & div{
-        margin-top:auto;
+.section-selector {
+    padding-top: 164px;
+    & div {
+        margin-top: auto;
         margin-right: 30px;
-        display:flex;
+        display: flex;
         & a {
-                text-decoration: none;
-                color: white;
-            }
+            text-decoration: none;
+            color: white;
         }
-        & a:hover {
-            color: #d27979;
-        
     }
-    
+    & a:hover {
+        color: #d27979;
+    }
 }
 
-.card{
-    height: 100%;
-    & img{
+.card {
+    height: 95%;
+    overflow: hidden;
+    margin-top: $gridgutter;
+
+    & img {
         display: block;
-        height: auto;
+        width: 100%;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+            transform: scale(1.8);
+            filter: brightness(0.5);
+        }
+    }
+}
+
+.next-previous {
+    margin: 20px 40px;
+    font-weight: bold;
+    display: flex;
+    margin: 0 auto;
+    & div:last-child {
+        text-align: end;
+    }
+    & a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+            color: #d27979;
+        }
+    }
+}
+
+.arrow-right {
+    margin-left: 10px;
+
+    &::after,
+    &::before {
+        display: inline-block;
+        content: "";
+        vertical-align: middle;
+    }
+    &:after {
+        width: 0;
+        height: 0;
+        border-left: 4px solid $white;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+    }
+    &:before {
+        width: 12px;
+        height: 1px;
+        background: $white;
+    }
+}
+
+.arrow-left {
+    margin-right: 10px;
+
+    &::after,
+    &::before {
+        display: inline-block;
+        content: "";
+        vertical-align: middle;
+    }
+    &:after {
+        width: 12px;
+        height: 1px;
+        background: $white;
+    }
+    &:before {
+        width: 0;
+        height: 0;
+        border-right: 4px solid $white;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+    }
+}
+
+.footer-color {
+    margin-top: 40px;
+    width: 100vw;
+    background-color: rgba(35, 35, 35, 0.6);
+    position: fixed;
+    bottom: 0;
+}
+.footer-organizer {
+    display: flex;
+    align-items: center;
+    height: 84px;
+    background-color: rgba(35, 35, 35, 0.6);
+    font-weight: bold;
+
+    & div:first-child {
+        & a {
+            text-decoration: none;
+            color: $white;
+        }
+    }
+
+    & div:last-child {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+#big-picture {
+    width: 100%;
+    height: auto;
+    img {
+        background-size: cover;
         width: 100%;
     }
 }
+
+.breadcrumb {
+    list-style: none;
+    & ul {
+        padding: 0;
+    }
+}
+.breadcrumb li {
+    display: inline;
+}
+.breadcrumb li + li:before {
+    padding-right: 8px;
+    color: $white;
+    content: "\203A";
+    font-size: 24px;
+}
+.breadcrumb li a {
+    color: $white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+.breadcrumb li a:hover {
+    text-decoration: underline;
+}
+
+.title-organizer {
+    & p {
+        font-size: 16px;
+        margin: 0;
+        line-height: 21px;
+    }
+    & p:first-child {
+        font-size: 18px;
+    }
+}
+
+.second-title-organizer {
+    & p {
+        margin: 0;
+        line-height: 21px;
+    }
+}
+
+.card-organizer {
+    display: flex;
+    flex-direction: column;
+}
+
+.address-content {
+    flex-direction: column;
+    & div {
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 40px;
+    }
+    & p {
+        margin: 0;
+        line-height: 21px;
+        font-size: 16px;
+    }
+    & p:nth-child(5) {
+        margin-top: 40px;
+    }
+}
+
+#google-map {
+    height: 0;
+    padding-bottom: percentage(10/18);
+    position: relative;
+    margin-top:0 !important;
+    iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+}
+
+

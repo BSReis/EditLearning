@@ -401,7 +401,7 @@ template {
 /* ==================== */
 .card {
   width: 100%;
-  /*height: 15vh;*/
+  height: 15vh;
 }
 
 @media (min-width: 960px) {
@@ -979,7 +979,7 @@ header {
 }
 
 .section-selector {
-  padding-top: 192px;
+  padding-top: 164px;
 }
 
 .section-selector div {
@@ -1000,12 +1000,227 @@ header {
 }
 
 .card {
-  height: 100%;
+  height: 95%;
+  overflow: hidden;
+  margin-top: 20px;
 }
 
 .card img {
   display: block;
-  height: auto;
   width: 100%;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.card img:hover {
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+.next-previous {
+  margin: 20px 40px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
+.next-previous div:last-child {
+  text-align: end;
+}
+
+.next-previous a {
+  text-decoration: none;
+  color: white;
+}
+
+.next-previous a:hover {
+  color: #d27979;
+}
+
+.arrow-right {
+  margin-left: 10px;
+}
+
+.arrow-right::after, .arrow-right::before {
+  display: inline-block;
+  content: "";
+  vertical-align: middle;
+}
+
+.arrow-right:after {
+  width: 0;
+  height: 0;
+  border-left: 4px solid #FFF;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.arrow-right:before {
+  width: 12px;
+  height: 1px;
+  background: #FFF;
+}
+
+.arrow-left {
+  margin-right: 10px;
+}
+
+.arrow-left::after, .arrow-left::before {
+  display: inline-block;
+  content: "";
+  vertical-align: middle;
+}
+
+.arrow-left:after {
+  width: 12px;
+  height: 1px;
+  background: #FFF;
+}
+
+.arrow-left:before {
+  width: 0;
+  height: 0;
+  border-right: 4px solid #FFF;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.footer-color {
+  margin-top: 40px;
+  width: 100vw;
+  background-color: rgba(35, 35, 35, 0.6);
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-organizer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 84px;
+  background-color: rgba(35, 35, 35, 0.6);
+  font-weight: bold;
+}
+
+.footer-organizer div:first-child a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.footer-organizer div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#big-picture {
+  width: 100%;
+  height: auto;
+}
+
+#big-picture img {
+  background-size: cover;
+  width: 100%;
+}
+
+.breadcrumb {
+  list-style: none;
+}
+
+.breadcrumb ul {
+  padding: 0;
+}
+
+.breadcrumb li {
+  display: inline;
+}
+
+.breadcrumb li + li:before {
+  padding-right: 8px;
+  color: #FFF;
+  content: "\203A";
+  font-size: 24px;
+}
+
+.breadcrumb li a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+.title-organizer p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 21px;
+}
+
+.title-organizer p:first-child {
+  font-size: 18px;
+}
+
+.second-title-organizer p {
+  margin: 0;
+  line-height: 21px;
+}
+
+.card-organizer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.address-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.address-content div {
+  font-size: 22px;
+  line-height: 32px;
+  margin-bottom: 40px;
+}
+
+.address-content p {
+  margin: 0;
+  line-height: 21px;
+  font-size: 16px;
+}
+
+.address-content p:nth-child(5) {
+  margin-top: 40px;
+}
+
+#google-map {
+  height: 0;
+  padding-bottom: 55.55556%;
+  position: relative;
+  margin-top: 0 !important;
+}
+
+#google-map iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */
