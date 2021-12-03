@@ -74,8 +74,9 @@ header {
 .category-organizer {
     text-align: start;
     font-size: 36px;
-    font-weight: 800;
-    letter-spacing: 3px;
+    font-weight: bold;
+    line-height: 47px;
+
     flex-direction: column;
     margin-top: 124px;
 
@@ -368,12 +369,16 @@ main {
         }
     }
     .category-organizer {
-        font-size: 62px;
-        line-height: 96px;
+        font-size: 72px;
+        line-height: 95px;
+        font-weight: bold;
+
     }
     .main-text {
         & p {
             font-size: 48px;
+            line-height: 63px;
+            font-weight: 300;
         }
     }
 
