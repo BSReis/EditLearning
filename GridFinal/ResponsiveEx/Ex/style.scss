@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap");
 @import "normalize";
 @import "variables";
 @import "utils";
@@ -7,7 +7,7 @@
 html body {
     margin: 0;
     padding: 0;
-    font-family: roboto mono;
+    font-family: "Roboto Mono", monospace;
 }
 
 .background-img {
@@ -113,14 +113,21 @@ header {
     transition: 0.2s ease;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .main-text {
     font-weight: 300;
-    font-size: 24px;
+
     line-height: 32px;
     height: 100vh;
     & p {
         margin-top: auto;
         margin-bottom: $gridgutter * 3;
+        font-size: 24px;
     }
 }
 
@@ -140,19 +147,37 @@ header {
     }
 }
 
+.hover-card {
+    transition: all 0.4s ease-in-out;
+    &:hover {
+        transform: scale(1.4);
+        & img {
+            filter: brightness(0.5);
+        }
+        & ul {
+            opacity: 1;
+        }
+    }
+}
+
+.hover-content {
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    opacity: 0;
+    list-style-type: none;
+    line-height: 14px;
+}
 .card {
     height: 95%;
     overflow: hidden;
     margin-top: $gridgutter;
+    position: relative;
 
     & img {
         display: block;
         width: 100%;
-        transition: all 0.4s ease-in-out;
-        &:hover {
-            transform: scale(1.8);
-            filter: brightness(0.5);
-        }
     }
 }
 
@@ -160,7 +185,6 @@ header {
     margin: 20px 40px;
     font-weight: bold;
     display: flex;
-    margin: 0 auto;
     & div:last-child {
         text-align: end;
     }
@@ -220,17 +244,14 @@ header {
 }
 
 .footer-color {
-    margin-top: 40px;
     width: 100vw;
     background-color: rgba(35, 35, 35, 0.6);
-    position: fixed;
-    bottom: 0;
+    margin-top: auto;
 }
 .footer-organizer {
     display: flex;
     align-items: center;
     height: 84px;
-    background-color: rgba(35, 35, 35, 0.6);
     font-weight: bold;
 
     & div:first-child {
@@ -242,13 +263,17 @@ header {
 
     & div:last-child {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: end;
+        & div {
+            margin-right: 12px;
+        }
     }
 }
 
 #big-picture {
     width: 100%;
     height: auto;
+    margin-bottom: 40px;
     img {
         background-size: cover;
         width: 100%;
@@ -290,8 +315,12 @@ header {
         font-size: 18px;
     }
 }
+.description {
+    font-size: 16px;
+}
 
 .second-title-organizer {
+    font-size: 18px;
     & p {
         margin: 0;
         line-height: 21px;
@@ -324,7 +353,7 @@ header {
     height: 0;
     padding-bottom: percentage(10/18);
     position: relative;
-    margin-top:0 !important;
+    margin-top: 0 !important;
     iframe {
         width: 100%;
         height: 100%;
@@ -332,4 +361,33 @@ header {
     }
 }
 
+@media (min-width: $desktop) {
+    .header-home {
+        & a {
+            font-size: 18px;
+        }
+    }
+    .category-organizer {
+        font-size: 62px;
+        line-height: 96px;
+    }
+    .main-text {
+        & p {
+            font-size: 48px;
+        }
+    }
 
+    .title-organizer {
+        & p {
+            font-size: 18px;
+            line-height: 32px;
+        }
+        & p:first-child {
+            font-size: 24px;
+        }
+    }
+
+    .description {
+        font-size: 18px;
+    }
+}
