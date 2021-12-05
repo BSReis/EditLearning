@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css2?family=#{$bodyfont}:wght@#{$bodyfontweights}&display=swap);
+
+html{
+    font-family: $bodyfontfamily, sans-serif;
+    color: $white;
+    background-color: $black;
+    font-weight: 300;
+    line-height: 1.618; // the golden ratio, baby!
+    // Setting base font-size for different breakpoints to then use REM everywhere:
+    font-size: $basefontsizemobile;
+    @media(min-width: $tablet){
+      font-size: $basefontsizetablet;
+    }
+    @media(min-width: $desktop){
+      font-size: $basefontsizedesktop;
+    }
+}
+
+/* ======================== */
+/* ======= HEADINGS ======= */
+/* ======================== */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
+  font-family: $bodyfontfamily, sans-serif;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.414; // the square root of "2", same as the silver ratio minus "1"
+  &.light, &.small{
+    font-weight: 400;
+  }
+}
+p{
+  margin: 0 0 $gridgutter / 2 0;
+}
+
+/* ==================== */
+/* ======= TEXT ======= */
+/* ==================== */
+.textleft{
+  text-align: left;
+}
+.textcenter{
+  text-align: center;
+}
+.textright{
+  text-align: right;
+}
+
+.strong, strong{
+  font-weight: 700;
+}
+
+small, .small{
+  font-size: 0.8rem;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}

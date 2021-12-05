@@ -1,0 +1,25 @@
+$primary: #D27979;
+$white: #FFF;
+$gray: #343434;
+$graydark: #232323;
+$black: #121212;
+
+$tablet: 750px;
+$desktop: 960px;
+$desktoplg: 1400px;
+
+$gridcolumns: 6;
+$gridgutter: 20px;
+
+$gridwidth: calc(100% - #{$gridgutter});
+$gridwidtht: calc(90% - #{$gridgutter});
+$gridwidthd: $desktop - $gridgutter * 2;
+$gridwidthdlg: $desktoplg - $gridgutter * 3;
+
+$bodyfont: "Roboto+Mono";
+$bodyfontfamily: "Roboto Mono";
+$bodyfontweights: "300;400;700";
+
+$basefontsizemobile: $gridgutter / 3 * 2;
+$basefontsizetablet: $gridgutter / 3 * 2 + 1;
+$basefontsizedesktop: $gridgutter / 3 * 2 + 2;

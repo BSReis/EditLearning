@@ -1,0 +1,42 @@
+/* ================================== */
+/* ======= MARGINS / PADDINGS ======= */
+/* ================================== */
+$sizes: (
+    'none': 0,
+    'full': $gridgutter, 
+    'double': $gridgutter * 2
+);
+@each $name, $size in $sizes {
+    @each $mode in margin, padding {
+        .#{$mode}#{$name} {
+            #{$mode}: $size !important;
+        }
+        .#{$mode}horizontal#{$name} {
+            #{$mode}-left: $size !important;
+            #{$mode}-right: $size !important;
+        }
+        .#{$mode}vertical#{$name} {
+            #{$mode}-top: $size !important;
+            #{$mode}-bottom: $size !important;
+        }
+        @each $side in top, right, bottom, left {
+            .#{$mode}#{$side}#{$name} {
+                #{$mode}-#{$side}: $size !important;
+            }
+        }
+    }
+}
+
+/* ====================== */
+/* ======= IMAGES ======= */
+/* ====================== */
+.imgfit{
+    display: block;
+    width: 100%;
+    height: auto;
+    img, source{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

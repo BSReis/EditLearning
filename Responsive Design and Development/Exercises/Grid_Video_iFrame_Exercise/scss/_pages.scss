@@ -1,0 +1,36 @@
+aside{
+    > h2{
+        @extend .uppercase;
+        font-weight: 300;
+        font-size: 1.125rem;
+        @media (min-width: $tablet) {
+            font-size: 1.06rem;
+        }
+        @media (min-width: $desktop) {
+            font-size: 1rem;
+        }
+    }
+}
+article{
+    h1, & > p{
+        margin:0;
+        padding: 0;
+    }
+    h1{
+        @extend .uppercase;
+        font-size: 1.15rem;
+        font-weight: 300;
+    }
+    > p{
+        font-size: 0.85rem;
+    }
+    .description{
+        @extend .margintopdouble;
+        p{
+            @extend .marginbottomdouble;
+            &:last-of-type{
+                @extend .marginbottomnone;
+            }
+        }
+    }
+}

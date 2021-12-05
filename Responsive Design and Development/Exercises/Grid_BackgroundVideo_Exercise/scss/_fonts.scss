@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css2?family=#{$bodyfont}:wght@#{$bodyfontweights}&display=swap);
+
+html{
+    font-family: $bodyfontfamily, sans-serif;
+    color: $white;
+    background-color: $black;
+    font-weight: 300;
+    line-height: 1.618; // the golden ratio, baby!
+    // Setting base font-size for different breakpoints to then use REM everywhere:
+    font-size: $basefontsizemobile;
+    @media(min-width: $tablet){
+      font-size: $basefontsizetablet;
+    }
+    @media(min-width: $desktop){
+      font-size: $basefontsizedesktop;
+    }
+}
+
+/* ==================== */
+/* ======= TEXT ======= */
+/* ==================== */
+.uppercase{
+  text-transform: uppercase;
+}
