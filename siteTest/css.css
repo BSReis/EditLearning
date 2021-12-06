@@ -190,7 +190,7 @@ html body {
     z-index: 1;
 }
 
-.footer-section section:first-child{
+.footer-section section:first-child {
     background-color: #00695C;
 
 }
@@ -202,64 +202,69 @@ html body {
     justify-content: center;
     font-size: 14px;
     max-width: 920px;
-    margin:auto;
-}
-.footer-infos{
-    line-height: 1.5rem;
     margin: auto;
-padding:0.5rem;
-
 }
 
-.footer-infos div:first-child{
+.footer-infos {
+    line-height: 1.5rem;
+    margin: 0 auto;
+}
+
+.footer-infos div:first-child {
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
-.payment-icons img{
+.payment-icons img {
     height: 30px;
     width: 40px;
 }
-.footer-last div:first-child{
+
+.footer-last div:first-child {
     margin: 0.5rem;
     font-size: 14px;
 }
-.footer-last div:last-child{
+
+.footer-last div:last-child {
     margin: 0.5rem;
 }
 
-.footer-last div:nth-child(2){
+.footer-last div:nth-child(2) {
     display: flex;
     align-items: center;
 }
 
-@media screen and (max-width: 400px) {
-    .footer-infos div:not(:first-child){
-        display: none;
-    }
-    .footer-infos{
-        padding: 0;
-    }
-    .footer-links{
-        padding: 1rem;
-    }
+.footer-infos div:not(:first-child) {
+    display: none;
 }
 
 
+
+@media screen and (min-width: 600px) {
+    .footer-infos div:not(:first-child) {
+        display: block;
+    }
+    .footer-infos {
+        padding: 0.5rem;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .nav {
         width: 30%;
     }
+
     .nav li:first-child {
         display: none;
     }
+
     .card {
         margin: 0 0 2rem 0;
         padding: 0 0.5rem 0 0.5rem;
         height: 170px;
         width: calc(100vw / 4);
     }
+
     .account-icon {
         display: block;
     }
@@ -267,13 +272,14 @@ padding:0.5rem;
 
 @media screen and (min-width: 900px) {
 
-    .media-margin{
+    .media-margin {
         align-items: center;
         max-width: 920px;
-        margin:auto;
+        margin: auto;
     }
+
     .card {
-max-width: 25%;
+        max-width: 25%;
     }
 
 }
